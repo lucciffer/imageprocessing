@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 # Parse the version from the main __init__.py
-with open('micasense/__init__.py') as f:
+with open('micasense/__init__.py') as f:#//@remind
     for line in f:
         if line.find("__version__") >= 0:
             version = line.split("=")[1].strip()
