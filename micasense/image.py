@@ -421,6 +421,11 @@ class Image(object):
             title = '{} Band {} Raw DN'.format(self.band_name, self.band_index)
         return plotutils.plotwithcolorbar(self.raw(), title=title, figsize=figsize)
 
+    
+    # def export_channels(self):
+    #     ''' Export individual bands of multispectral cube'''
+    #     return plotutils.export_bands(self.raw())
+
     def plot_intensity(self, title=None, figsize=None):
         ''' Create a single plot of the image converted to uncalibrated intensity '''
         if title is None:

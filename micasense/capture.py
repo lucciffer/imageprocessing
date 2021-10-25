@@ -604,6 +604,35 @@ class Capture(object):
         else:
             imageio.imwrite(out_file_name, (255 * unsharp_rgb).astype('uint8'))
 
+
+
+    # # custom function for exporting bands/individual channels for the multispectral cube
+    # def export_capture_channels(self, out_file_name):
+    #     """
+    #     Output the Images in the Capture object as RGB.
+    #     :param out_file_name: str system file path
+    #     :param gamma: float gamma correction
+    #     :param downsample: int downsample for cv2.resize()
+    #     :param white_balance: str 'norm' to normalize across bands using hist_min_percent and hist_max_percent.
+    #         Else this parameter is ignored.
+    #     :param hist_min_percent: float for min histogram stretch
+    #     :param hist_max_percent: float for max histogram stretch
+    #     :param sharpen: boolean
+    #     :param rgb_band_indices: List band order
+    #     """
+    #     if self.__aligned_capture is None:
+    #         raise RuntimeError("Call Capture.create_aligned_capture() prior to saving as RGB.")
+    #     im_display = np.zeros(
+    #         (self.__aligned_capture.shape[0], self.__aligned_capture.shape[1], self.__aligned_capture.shape[2]), self.__aligned_capture.shape[3], self.__aligned_capture.shape[4],
+    #         dtype=np.float32)
+
+    #     np.save("../sample_export.npy",im_display)
+
+        
+
+
+        
+
     def save_thermal_over_rgb(self, out_file_name, fig_size=(30, 23), lw_index=None, hist_min_percent=0.2,
                               hist_max_percent=99.8):
         """

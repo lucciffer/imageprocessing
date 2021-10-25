@@ -27,6 +27,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.pylab import cm
+import numpy as np
+
 
 def plotwithcolorbar(img, title=None, figsize=None, vmin=None, vmax=None):
     ''' Plot an image with a colorbar '''
@@ -37,8 +39,11 @@ def plotwithcolorbar(img, title=None, figsize=None, vmin=None, vmax=None):
     cax = divider.append_axes("right", size="3%", pad=0.05)
     fig.colorbar(rad2, cax=cax)
     plt.tight_layout()
+    # plt.savefig('../sample_export.jpg')
+    # print("hello")
     plt.show()
     return fig, axis
+
 
 def subplotwithcolorbar(rows, cols, images, titles=None, figsize=None):
     ''' Plot a set of images in subplots '''
@@ -107,7 +112,7 @@ def colormap(cmap):
     '''
     plt.set_cmap(cmap)
 
-import numpy as np
+
 def plot_ned_vector3d(x,y,z, u=0,v=0,w=0, title=None, figsize=(8,5)):
     '''Create a 3d plot of a North-East-Down vector. XYZ is the (tip of the) vector,
        uvw is the base location of the vector '''
