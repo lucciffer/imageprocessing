@@ -29,6 +29,6 @@ print("panel irradiance: ",panel_irradiance)
 
 panel_metadata = {'panel_reflectance' : panel_reflectance_by_band, 'panel_irradiance' : panel_irradiance}
 np.save('../MSI/data_processing/calibration_matrices/panel_metadata.npy', panel_metadata)
-print(panel_metadata)
+# print(panel_metadata)
 
 print("[INFO] Panel metadata exported...")
